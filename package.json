@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "start": "vite preview --port $PORT",
+    "start": "vite start",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest"
