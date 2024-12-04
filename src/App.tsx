@@ -1,17 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout';
 import { ProtectedRoute } from './components/auth/protected-route';
 import { Home } from './pages/home';
 import { Login } from './pages/auth/login';
 import { Register } from './pages/auth/register';
-import { Menu } from './pages/menu';
-import { Inventory } from './pages/inventory';
 import { Dashboard } from './pages/dashboard';
+import { Inventory } from './pages/inventory';
+import { Menu } from './pages/menu';
 
-function App() {
+export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -25,8 +25,6 @@ function App() {
           </Route>
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
-
-export default App;

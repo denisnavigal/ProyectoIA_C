@@ -1,8 +1,23 @@
+export type Character = {
+  id: number;
+  name: string;
+  description: string;
+  type: 'hero' | 'villain';
+  image: string;
+  abilities: string[];
+  firstAppearance: string;
+};
+
+export type ApiResponse = {
+  data: Character[];
+  status: number;
+};
+
 export type User = {
   id: string;
-  email: string;
   name: string;
-  role: 'WORKER' | 'CUSTOMER';
+  email: string;
+  role: 'CUSTOMER' | 'WORKER';
 };
 
 export type Product = {
@@ -12,16 +27,4 @@ export type Product = {
   price: number;
   quantity: number;
   image: string;
-};
-
-export type Review = {
-  id: string;
-  userId: string;
-  productId: string;
-  rating: number;
-  comment: string;
-  createdAt: string;
-  user: {
-    name: string;
-  };
 };
